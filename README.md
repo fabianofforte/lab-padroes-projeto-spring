@@ -1,15 +1,15 @@
-Lab Padrões de Projeto Spring
+# Lab Padrões de Projeto Spring
 
-📋 Visão Geral
+# 📋 Visão Geral
 Projeto desenvolvido durante o lab "Explorando Padrões de Projetos na Prática com Java" da Digital Innovation One. Implementação prática de padrões de projeto utilizando o ecossistema Spring, com foco em boas práticas de desenvolvimento e arquitetura de software.
 
-🎯 Padrões de Projeto Implementados
+# 🎯 Padrões de Projeto Implementados
 Padrão	Implementação	Descrição
 Singleton	@Service, @Component	Beans gerenciados pelo Spring com única instância
 Strategy	JpaRepository	Abstração de operações de banco de dados
 Facade	ClienteService	Fachada que integra subsistemas (API ViaCEP + H2)
 
-🛠️ Tecnologias
+# 🛠️ Tecnologias
 Java 21 - Lógica de negócio
 Spring Boot 4.0.3 - Framework principal
 Spring Data JPA - Persistência
@@ -18,26 +18,25 @@ H2 Database - Banco em memória
 Maven - Gerenciamento de dependências
 Swagger/OpenAPI - Documentação interativa
 
-🚀 Execução
+# 🚀 Execução
 Pré-requisitos
 Java JDK 21
 
 Maven 3.9+
 
 Comandos
-bash
-# Compilar
+
+*Compilar
 mvn clean install
 
-# Executar
+*Executar
 mvn spring-boot:run
-URLs
-Serviço	URL
+
 API	http://localhost:8080
 Swagger	http://localhost:8080/swagger-ui.html
 H2 Console	http://localhost:8080/h2-console
 
-🧩 Arquitetura
+# 🧩 Arquitetura
 text
 ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
 │ Cliente  │───▶│Controller│───▶│ Service  │───▶│Repository│
@@ -50,21 +49,21 @@ text
 │(Externa) │    │(Memória) │
 └──────────┘    └──────────┘
 
-⚙️ Configurações Principais
-properties
-# Banco H2
+# ⚙️ Configurações Principais
+
+*Banco H2
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.h2.console.enabled=true
 
-# JPA
+*JPA
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 
-# Swagger
+*Swagger
 springdoc.swagger-ui.path=/swagger-ui.html
 
 
-📚 Conceitos Aplicados
+#📚 Conceitos Aplicados
 ✅ Injeção de Dependência
 
 ✅ Beans do Spring (Singleton)
